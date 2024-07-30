@@ -1,0 +1,49 @@
+local Players = game: GetService("Players")
+
+local LocalPlayer = Players.LocalPlayer
+
+local Configurations = {
+
+Enabled true,
+
+Distance 20,
+
+}
+
+task.spawn(function()
+
+if Configurations. Enabled then
+
+return
+
+end
+
+while task.wait() do
+
+for i, v in next, workspace:GetChildren() do
+
+if v.Name == "Football" and v: IsA("BasePart") then
+
+local Distance (v.Position LocalPlayer.Character: WaitForChild("Humanoid RootPart"). Position). Magnitude
+
+if Configurations. Distance <= Distance then
+
+firetouchinterest (LocalPlayer.Character: WaitForChild("Left Arm"), v, 0)
+
+firetouchinterest (LocalPlayer.Character: WaitForChild("Left Arm"), v, 0)
+
+task.wait()
+
+firetouchinterest (LocalPlayer.Character: WaitForChild("Left Arm"), v, 1)
+
+firetouchinterest (LocalPlayer.Character: WaitForChild("Left Arm"), v, 1)
+
+end
+
+end
+
+end
+
+end
+
+end
